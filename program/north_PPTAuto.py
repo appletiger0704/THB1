@@ -12,7 +12,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 from pptx.util import Pt
 from pptx.dml.color import RGBColor
 from datetime import datetime, timedelta
-# import pandas as pd 
+import pandas as pd 
 import re
 import os
 
@@ -45,7 +45,7 @@ ppt_path = rf"C:\Users\User\Desktop\North_auto\{format_date}\{format_date}-0900-
 # 昨日檔案位置
 ppt_ypath = rf"C:\Users\User\Desktop\North_auto\{format_ydate}\{format_ydate}-0900-AM-常時分析報告.pptx"
 # 昨日雨量csv檔案位置
-# csv_path = rf"C:\Users\User\Desktop\North_auto\yday_accumulate\{format_date}\{format_ydate}_累積雨量.csv"
+csv_path = rf"C:\Users\User\Desktop\North_auto\yday_accumulate\{format_date}\{format_ydate}_累積雨量.csv"
 os.chdir(path)
 
     
@@ -214,52 +214,50 @@ change_img(fifth_slide, "cropped_6_24QPF.png", 9005248)
 
 #====================
 
+
 # 回傳一個list
-# def read_csv(path):
-    
-#     df = pd.read_csv(csv_path, encoding="big5")
+def read_csv(path):
+  
+    df = pd.read_csv(path, encoding="big5")
+    df.set_index("Unnamed: 0", inplace=True)
+    df.index.name = "測站"
+    df_dict = df.to_dict(orient="dict")["昨日累積雨量"] # 
+    rainfall_list = []
 
-#     df.set_index("Unnamed: 0", inplace=True)
-
-#     df.index.name = "測站"
-    
-#     df_dict = df.to_dict(orient="dict")[f"昨日({format_ydate})累積雨量"]
-    
-#     rainfall_list = []
-    
-#     for key, item in df_dict.items():
+    for key, item in df_dict.items():
         
-#         rainfall_list.append(str(item))
-    
-#     return rainfall_list
-
-
-
-# # 昨日累積雨量
-# def table_yday_rainfall(slide, start, end):
+        rainfall_list.append(str(item))
         
-#     for shape in slide.shapes:
+    return rainfall_list
+
+
+
+# 昨日累積雨量
+def table_yday_rainfall(slide, start, end):
         
-#         if shape.shape_type == MSO_SHAPE_TYPE.TABLE:
+    for shape in slide.shapes:
+        
+        if shape.shape_type == MSO_SHAPE_TYPE.TABLE:
             
-#             count = 1
+            count = 1
             
-#             for item in read_csv(csv_path)[start:end]:
+            for item in read_csv(csv_path)[start:end]:
                 
-#                 rainfall_box = shape.table.cell(count,2)
-#                 font(rainfall_box, item, RGBColor(00,00,00), 16)
-#                 count = count + 1
+                rainfall_box = shape.table.cell(count,3)
+                font(rainfall_box, item, RGBColor(00,00,00), 16)
+                count = count + 1
                 
 
-# try:
+try:
 
-#     table_yday_rainfall(sixth_slide, 0, 10)
-#     table_yday_rainfall(seventh_slide,10, 21)
-#     print("成功更新監控路段雨量")
+    table_yday_rainfall(seventh_slide, 0, 8)
+    table_yday_rainfall(eighth_slide, 8, 18)
+    table_yday_rainfall(ninth_slide, 18, 26)
+    print("成功更新監控路段雨量")
 
-# except:
-#     print("未更新監控路段雨量")
-#     write_txt("未更新監控路段昨日雨量")
+except:
+    print("未更新監控路段雨量")
+    write_txt("未更新監控路段昨日雨量")
     
     
 

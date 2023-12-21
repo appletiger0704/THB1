@@ -54,7 +54,6 @@ URL ={
       "RainMap_oneHourAgo" : f"http://tidpweather.vpnplus.to:50020/RainMap/THB1/THB1_{format_date}_{one_hours_ago.hour}00.png"
       }
 
-
 def write_txt(text):
     
     date = now.strftime("%y%m%d")

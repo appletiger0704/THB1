@@ -1,0 +1,58 @@
+採用今日簡報
+round_Satellite.png success  
+round_Satellite.png, 6988337, 1199521, 4087664, 4087664 
+
+round_SWM.png success  
+round_SWM.png, 1115999, 1205051, 5605551, 4082134 
+
+round_StreamLine.png success  
+round_StreamLine.png, 835087, 916387, 8164268, 4082134 
+
+E_08_image.png success  
+E_08_image.png, 6784343, 767218, 4138157, 4138157 
+
+E_yday_image.png success  
+E_yday_image.png, 1276959, 767217, 4138157, 4138157 
+
+cropped_6_06QPF.png success  
+cropped_6_06QPF.png, 428261, 1181666, 2868758, 2099196 
+
+cropped_6_12QPF.png success  
+cropped_6_12QPF.png, 3283377, 1180680, 2868758, 2099196 
+
+cropped_6_18QPF.png success  
+cropped_6_18QPF.png, 6152135, 1181664, 2868758, 2099196 
+
+cropped_6_24QPF.png success  
+cropped_6_24QPF.png, 9005248, 1185792, 2868758, 2099196 
+
+簡報儲存成功
+採用今日簡報
+round_Satellite.png success  
+round_Satellite.png, 6988337, 1199521, 4087664, 4087664 
+
+round_SWM.png success  
+round_SWM.png, 1115999, 1205051, 5605551, 4082134 
+
+round_StreamLine.png success  
+round_StreamLine.png, 835087, 916387, 8164268, 4082134 
+
+E_08_image.png success  
+E_08_image.png, 6784343, 767218, 4138157, 4138157 
+
+E_yday_image.png success  
+E_yday_image.png, 1276959, 767217, 4138157, 4138157 
+
+cropped_6_06QPF.png success  
+cropped_6_06QPF.png, 428261, 1181666, 2868758, 2099196 
+
+cropped_6_12QPF.png success  
+cropped_6_12QPF.png, 3283377, 1180680, 2868758, 2099196 
+
+cropped_6_18QPF.png success  
+cropped_6_18QPF.png, 6152135, 1181664, 2868758, 2099196 
+
+cropped_6_24QPF.png success  
+cropped_6_24QPF.png, 9005248, 1185792, 2868758, 2099196 
+
+簡報儲存成功
